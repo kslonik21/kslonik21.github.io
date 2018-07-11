@@ -1,0 +1,640 @@
+@font-face {
+  font-family: YesevaOne;
+  src: url(../assets/fonts/yeseva-one/YesevaOne-Regular_v2.otf);
+}
+
+@font-face {
+  font-family: GentiumBookBasic;
+  src: url(../assets/fonts/Gentium-Basic/GenBasB.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../assets/fonts/open-sans/OpenSans-Italic.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../assets/fonts/open-sans/OpenSans-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../assets/fonts/open-sans/OpenSans-Bold.ttf);
+  font-weight: bold;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  padding: 0;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.content {
+ min-height: calc(100vh - 320px);
+}
+
+h1,
+h2,
+h3,
+p {
+  cursor: default;
+}
+
+.mrg-auto,
+.container {
+  margin: 0 auto;
+}
+
+.container {
+  width: 1200px;
+}
+
+h1,
+h2,
+h3,
+.pdng_null {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+.mrg_null {
+  margin: 0;
+}
+
+p,
+.fs16 {
+  font-size: 1.6rem;
+}
+
+.fs18 {
+  font-size: 1.8rem;
+}
+
+.delimiter,
+.displ_block {
+  display: block;
+}
+
+ .background {
+  background: url(../assets/img/bg_heading.png) no-repeat top / cover;
+  height: 750px;
+  box-shadow: inset 0 7rem 12rem -5rem #000000;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  width: 100%;
+  clear: both;
+}
+
+.to_uppercase {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.logo {
+  margin-left: -15px;
+  padding-top: 45px;
+}
+
+nav {
+  margin-left: 200px;
+  max-width: 800px;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 22px;
+  padding-right: 14px;
+  padding: 48px 14px 0 14px;
+}
+
+nav a {
+  font-family: GentiumBookBasic;
+  font-size: 2rem;
+  display: block;
+}
+
+nav li:hover {
+  border: 0;
+  border-top: 4px solid rgba(255, 255, 255, 0.71);
+  padding-top: 44px;
+}
+
+.icons {
+  max-height: 100px;
+  max-width: 130px;
+  overflow: hidden;
+}
+
+.icons li {
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 48px 8px 0 8px;
+}
+
+.icons i {
+  color: #dab33e;
+}
+
+.icons i:hover {
+  color: #ffc107;
+}
+
+.heading {
+  margin-top: 140px;
+}
+
+h1 {
+  font-family: YesevaOne;
+  text-align: center;
+  color: rgba(242, 243, 243, 0.92);
+  font-size: 9rem;
+  font-weight: normal;
+  cursor: default;
+  line-height: 1.3;
+  text-shadow: 1px 1px black;
+}
+
+.delimiter {
+  padding-top: 15px;
+}
+
+.title .delimiter {
+  padding-top: 25px;
+}
+
+.button {
+  display: inline-block;
+  width: 225px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 34px;
+  font-family: Lato;
+  text-align: center;
+  padding: 18px 45px;
+  border: 1px solid black;
+  float: left;
+  margin-left: 360px;
+  box-sizing: border-box;
+}
+
+.button:last-child {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: white;
+  float: right;
+  margin-right: 360px;
+  margin-left: 0;
+}
+
+.about {
+  min-height: 710px;
+  background: url(../assets/img/pattern_one.png) repeat top / auto,
+  linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(169, 169, 169, 0.4));
+  box-shadow: inset 0px 33px 138px -20px rgba(169, 169, 169, 0.4);
+}
+
+.wrapper_flex {
+  display: flex;
+}
+
+.description {
+  width: 430px;
+  padding: 25px 0px;
+  margin-left: 90px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 3.6rem;
+  text-align: center;
+  font-family: YesevaOne;
+  font-weight: normal;
+}
+
+.color_orange {
+  color: #cc9900;
+}
+
+p {
+  font-family: Lato;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.description p {
+  color: #4c4c4c;
+  min-height: 150px;
+}
+
+.cook {
+  margin-left: 70px;
+}
+
+.dish {
+  padding-top: 55px;
+  padding-left: 20px;
+}
+
+.ingredients {
+  min-height: 760px;
+  background: url(../assets/img/bg2.png)  no-repeat top / cover;
+}
+
+.description_of_ingredients {
+  width: 570px;
+  min-height: 560px;
+  background-color: rgba(0, 0, 0, 0.67);
+  float: right;
+  margin-top: 100px;
+  margin-right: 15px;
+  box-sizing: border-box;
+}
+
+.description_of_ingredients h2 {
+  padding-top: 75px;
+}
+
+.description_of_ingredients p {
+  padding: 0 70px;
+  max-width: 430px;
+}
+
+.ingredients .wrapper_flex {
+  padding-left: 80px;
+  padding-bottom: 15px;
+}
+
+.ingredient {
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 50px 15px 0;
+}
+
+.ingredient:nth-of-type(1) {
+  background: url(../assets/img/ingredient_one.png)  no-repeat center / auto;
+}
+
+.ingredient:nth-of-type(2) {
+  background: url(../assets/img/ingredient_two.png)  no-repeat center / auto;
+}
+
+.ingredient:nth-of-type(3) {
+  background: url(../assets/img/ingredient_three.png)  no-repeat center / auto;
+}
+
+.menu {
+  min-height: 995px;
+  background: url(../assets/img/pattern_two.png)  repeat top / auto,
+  linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(169, 169, 169, 0.25));
+  box-shadow: inset 0px 33px 138px -20px rgba(169, 169, 169, 0.35);
+}
+
+.menu_items {
+  width: 1040px;
+  min-height: 900px;
+  overflow: hidden;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: grid;
+  grid-template-columns: 450px 450px;
+  grid-template-rows: auto;
+  grid-column-gap: 140px;
+}
+
+.grid_column:first-child {
+  margin-right: 160px;
+}
+
+.menu_item {
+  margin-top: 60px;
+  width: 450px;
+}
+
+.menu_item dt {
+  font-size: 2rem;
+  font-family: YesevaOne;
+  font-weight: normal;
+  display: inline-block;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.menu_item dt:nth-child(even) {
+  float: right;
+}
+
+.menu_item dd {
+  font-size: 1.6rem;
+  margin: 0 10px;
+  color: #4c4c4c;
+  text-align: left;
+  border-top: 1px solid #cc9900;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  min-height: 30px;
+  font-family: Lato;
+}
+
+.special {
+  width: 70px;
+  height: 20px;
+  float: right;
+}
+
+.special p {
+  background-color: #cc9900;
+  margin: 0 auto;
+  padding: 0 14px;
+  color: #f8fafa;
+  font-family: Lato;
+  font-size: 1.4rem;
+}
+
+.special_item {
+  margin-top: 30px;
+  border: 1px solid #cc9900;
+}
+
+.special_item h3 {
+  margin-top: 10px;
+}
+
+.reviews {
+  min-height: 760px;
+  background: url(../assets/img/background_reviews.png) no-repeat bottom / cover;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.guest_reviews {
+  background-color: rgba(0, 0, 0, 0.67);
+  width: 770px;
+  min-height: 560px;
+}
+
+.guest_reviews h2 {
+  padding-top: 80px;
+}
+
+blockquote {
+  padding: 0 70px 30px 70px;
+  position: relative;
+  text-align: center;
+}
+
+blockquote p {
+  font-size: 2.4rem;
+  min-height: 280px;
+  max-width: 630px;
+  font-family: GentiumBookBasic;
+  line-height: 45px;
+}
+
+blockquote cite {
+  font-style: normal;
+  font-family: Lato;
+  cursor: default;
+}
+
+blockquote p::before {
+  content: '\201C';
+  font-size: 8rem;
+  font-family: Georgia serif;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  color: #989997;
+  top: -5px;
+  left: 30px;
+}
+
+.reservations {
+  min-height: 710px;
+  background: url(../assets/img/pattern_one.png) repeat top / auto;
+  box-shadow: inset 0px 33px 138px -20px rgba(169, 169, 169, 0.4);
+  padding-top: 100px;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.reservation_img {
+  margin-right: 30px;
+}
+
+.reservations .description {
+  min-height: 510px;
+  width: 430px;
+  max-width: 430px;
+  padding-top: 0;
+  margin-left: 70px;
+  overflow: hidden;
+}
+
+.reservations .description p {
+  min-height: 75px;
+}
+
+.form_reservations {
+  margin-top: 40px;
+}
+
+.form_grid {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: auto;
+  grid-column-gap: 30px;
+}
+
+.form_reservations input {
+  width: 200px;
+  height: 35px;
+  border: 1px solid #7c7c7c;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: OpenSans;
+  font-style: italic;
+  color: #7c7c7c;
+  padding-left: 12px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  float: left;
+}
+
+.form_reservations input:active,
+.form_reservations input:focus {
+  border: 1px solid #cc9900;
+  outline:none;
+}
+
+.form_reservations label {
+  position: relative;
+  bottom: 8px;
+  font-size: 1.4rem;
+  font-family: OpenSans;
+  font-weight: bold;
+  color: #cc9900;
+}
+
+.form_reservations button {
+  height: 35px;
+  width: 200px;
+  background-color: #cc9900;
+  color: #fbf9f1;
+  margin-left: 115px;
+  font-family: OpenSans;
+  font-weight: normal;
+  text-align: center;
+  padding: 5px 55px;
+  box-sizing: border-box;
+  border: 0;
+}
+
+.form_reservations button:focus {
+  outline-color: #ffc107;
+}
+
+.form_reservations input[type="email"]:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+.form_reservations input[type="date"] {
+  position: relative;
+  padding: 10px;
+}
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-year-field,
+::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+}
+
+::-webkit-inner-spin-button {
+  display: none;
+}
+
+.form_reservations input[type="date"]::before {
+  content: 'date';
+}
+
+.form_reservations input[type="date"]::after {
+  background: none;
+  display: block;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  content: '\f073';
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  color: #7c7c7c;
+}
+
+.grid_row i {
+  color: #7c7c7c;
+}
+
+footer {
+  height: 320px;
+  background-color: #191919;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.grid {
+  display: grid;
+  padding-left: 15px;
+  padding-top: 60px;
+  grid-template-columns: 370px 230px 370px;
+  grid-template-rows: 260px;
+  grid-column-gap: 100px;
+  box-sizing: border-box;
+}
+
+.footer_info {
+  cursor: default;
+}
+
+.footer_info h3 {
+  color: #fefefe;
+  text-align: center;
+  font-size: 2rem;
+  font-family: YesevaOne;
+  font-weight: normal;
+  cursor: default;
+  margin: 0;
+}
+
+.footer_info .delimiter {
+  padding-top: 15px;
+}
+
+.cards ul {
+  margin-left: 15px;
+}
+
+.cards li {
+  display: inline-block;
+}
+
+.cards li,
+.footer_info .icons li {
+  font-size: 1.5rem;
+  padding: 35px 5px 0 5px;
+}
+
+.cards i:hover,
+.footer_info .icons i:hover {
+  color: #ffc107;
+}
+
+.footer_icons {
+  margin-left: 100px;
+}
+
+.footer_info .icons i {
+  color: #fefefe;
+}
+
+.footer_info p {
+  font-family: OpenSans;
+  font-weight: normal;
+  max-height: 120px;
+}
+
+.footer_info span {
+  font-weight: bold;
+}

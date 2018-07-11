@@ -1,0 +1,337 @@
+@font-face {
+    font-family: Bebas;
+    src: url(../fonts/BEBAS___.ttf);
+
+}
+@font-face {
+    font-family: Calibri;
+    src: url(../fonts/calibrib.ttf);
+
+}
+@font-face {
+    font-family: StMarie;
+    src: url(../fonts/StMarie-Thin.otf)
+    format("opentype");
+
+}
+html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+.page-wrapper {
+    min-height: 100%;
+    margin-bottom: -71px;
+}
+body {
+    max-width: 1600px;
+    margin: auto;
+}
+* {
+    padding: 0;
+        margin: 0;
+}
+.header-wrapper {
+    max-width: 1185px;
+    margin: 0 auto;
+}
+.general-wrapper {
+    max-width: 1600px;
+    margin: auto;
+}
+header {
+    position: fixed;
+    width: 1600px;
+    height: 125px;
+    background-color: white;
+    top: 0;
+    z-index: 100;
+}
+header img {
+    float: left;
+    padding-top: 7px;
+}
+.text-logo {
+    font-family: Bebas;
+    font-style: normal;
+    color:  #6e6d6b;
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 26.158px;
+    margin-top: 15px;
+}
+
+  h1 {/* (1) */
+     display: inline-block;
+     padding-top: 28px;
+     padding-left: 51px;
+     font-family: Calibri;
+     color:  #fb9c06;
+     font-size: 35px;
+     font-weight: 400;
+     line-height:43px;
+}
+ .logo-text{
+    display: inline-block;
+    text-align:left;
+}
+nav  {/* (1) */
+    display: inline-block;
+    float: right;
+    margin-top: 25px;
+}
+
+
+ul li {/* (1) */
+    background: url(../images/Navigation.png) no-repeat;
+    display: inline-block;
+    width: 120px;
+    height: 84px;
+    transition: 0.5s;
+}
+ul li:hover {/* (1) */
+    opacity: 0.6;
+
+}
+ul .nav-about {
+    background-position: -123px 0;
+
+}
+ul .nav-work {
+
+background-position: -240px 0;
+}
+ul .nav-blog {
+
+    background-position: -371px 0;
+}
+ul .nav-contact {
+    background-position: -494px 0;
+}
+ .background-orange {
+    background-image: url(../images/back-orange.png);
+    background-size: 100%;
+    margin: 132px auto 0 auto;
+    width: 100%;
+    height: 400px;
+    border-top: 4px solid orange;
+    border-bottom: 4px solid orange;
+
+}
+.wrapper-rabbits {
+    width: 382px;
+    height: 67px;
+    background-color: #4b4f4f;
+    margin-top: 128px;
+    margin-left: 220px;
+    opacity: 0.9;
+}
+.rabbits {
+    font-family: Bebas;
+    font-size: 35px;
+    font-weight: 400;
+    color: orange;
+    text-align: center;
+    line-height: 67px;
+}
+.wrapper-oranges {
+
+    width: 397px;
+    height: 77px;
+    background-color: rgba(255, 175, 18, 0.7);
+    margin-top: 27px;
+    margin-left: 210px;
+
+}
+.oranges {
+    font-family: Bebas;
+    font-size: 35px;
+    font-weight: 400;
+    color: orange;
+    text-align: center;
+    line-height: 67px;
+    color: #6e6d6b;
+}
+.content {
+    width: 1250px;
+    margin: 33px auto 0 auto;
+    min-height: 220px;
+}
+
+
+.content article {
+
+    float: left;
+    width: 261px;
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+.border-wrapper {
+    border-bottom: 2px solid lightgrey;
+    width: 100%;
+    display: inline-block;
+}
+.lorem {
+    font-family: Calibri;
+    color:  #000000;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+}
+.read {
+    font-size: 17px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 23.16px;
+    color:  #ffac00;
+    float: right;
+    transition:0.5s
+}
+
+.animals img {
+    width: 300px;
+    height: 300px;
+    border-radius:50%;
+    border: 8px solid orange;
+
+}
+.animals-items {
+    float: left;
+    margin-left: 150px;
+}
+.animals {
+    padding-top: 50px;
+    margin: auto;
+    max-width: 1600px;
+
+}
+h3 {/* (1) */
+    text-align:center;
+    font-family: StMarie;
+    color:  #ff9c00;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 23.16px;
+    text-decoration: underline;
+    padding-top:25px;
+}
+.position-content {
+    font-family: Calibri;
+    color:  #333333;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23.16px;
+    width:263px;
+    height:80px;
+    padding-top: 37px;
+    margin: auto;
+}
+
+.teammates {
+    font-family: Calibri;
+    color:  #6e6d6b;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 23.16px;
+    text-align: center;
+    padding-bottom: 38px;
+
+
+}
+.position {
+    font-family: Calibri;
+    font-style: normal;
+    color: #fb9c06;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 23.16px;
+}
+.field {
+    clear: both;
+     text-align: right;
+     padding-top: 36px;
+}
+label {/* (1) */
+    float: left;
+    font-family: StMarie;
+    color: #fb9c06;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 35.16px;
+    padding-right: 29px;
+}
+.main {
+    float:left;
+    padding-top: 74px;
+    margin-left: 145px;
+    padding-bottom: 53px;
+}
+input {/* (1) */
+    height: 34px;
+    width: 1070px;
+    background-color: rgba(247, 246, 245, 0.92);
+
+}
+.message {
+    height: 91px;
+    margin-bottom: 22px;
+}
+.main-title {
+    text-align: center;
+    font-family: StMarie;
+    color:  #ff9c00;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 23.16px;
+    text-decoration: underline;
+    padding-left: 80px;
+    padding-bottom: 45px;
+    margin-left: 55px;
+}
+
+.send {
+    width: 176px;
+    height: 46px;
+    background-color:  #fb9c06;
+    font-family: StMarie;
+    color:  #ffffff;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 23.16px;
+    margin-right: 25px;
+    text-align: center;
+    float: right;
+}
+.validation:valid {
+    border-color: green;
+}
+.text-req:required:valid {
+    border-color: green;
+}
+footer {/* (1) */
+    width: 100%;
+    height: 71px;
+    background-color: #fb9c06;
+    clear: both;
+    line-height:71px;
+    margin-bottom: 250px;
+}
+.copyright-text {
+    font-family: StMarie;
+    color:  #ffffff;
+    font-size: 33px;
+    font-weight: 100;
+    line-height: 76.16px;
+    text-align: center;
+
+}
+
+/*
+    (1) - используешь название тега в качестве селектора.
+        Плохая практика, т.к. в случае использования любой css-библиотеки геморрой неизбежен.
+        Старайся всегда через классы работать.
+
+    Старайся следить за тем чтобы отступы были единообразными.
+*/
