@@ -208,6 +208,7 @@
             var tiles=document.querySelectorAll(".tile-inner");
             for( var i =0, len=tiles.length;i<len;i++) {
                 var tile=tiles[i];
+                console.log(tile);
                 this._gamePlayEvents(tile);
             }
         }
@@ -216,6 +217,7 @@
           Board.prototype._gamePlayEvents = function(tile) {
              var self = this;
              tile.addEventListener( "click", function(e) {
+               console.log(this);
                if (!this.classList.contains("flipped")) {
                if (self.card1flipped === false && self.card2flipped === false) {
                    this.classList.add("flipped");
@@ -225,6 +227,7 @@
                 } else if( self.card1flipped === true && self.card2flipped === false ) {
                    this.classList.add("flipped");
                   self.card2 = this;
+                  console.log(self.card2);
                   self.card2id = this.getAttribute("data-id");
                   self.card2flipped = true;
                  if ( self.card1id == self.card2id ) {
@@ -313,7 +316,7 @@
 ## Про делегирование событий
 
         У тебя на каждую катрочку навешен обработчик:
-                
+
                 for( var i =0, len=tiles.length;i<len;i++) {
                     var tile=tiles[i];
                     this._gamePlayEvents(tile);
@@ -341,7 +344,7 @@
         Обрати на это внимание!
 
 
-  
+
 ## Про innerHTML
         Это очень трудозатратная и небезопасная операция. Поищи сам про это информацию.
         Пользуйся appendChild в большинстве случаев.
@@ -349,7 +352,7 @@
 
 /*
     Работа не плохая.
-    Все требования выполнены. 
+    Все требования выполнены.
     Верстка в норме. Код не очень красиво офомлен, но исплользованы хорошия практики для JS кодинга, такие как
     закрытый скоуп всего кода через самовызывающуюся функцию, инициализация параметрами по умолчанию и т.д.
     Ставлю оценку 90.
