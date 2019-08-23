@@ -20,6 +20,7 @@
         this.options= extend( {}, options);
         extend( this.options, options );
         this._init();
+        console.log(this.options);
     }
 
 
@@ -185,6 +186,7 @@
         this.newCards = [];
         for(var i= 0;i<this.halfNumTiles;i++) {
             this.newCards.push(this.cards[i],this.cards[i]);
+            console.log(this.newCards);
         }
         this.newCards=shuffle(this.newCards);
         this.tilesHTML='';

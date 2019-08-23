@@ -1,0 +1,94 @@
+.contents-game {
+  padding-top: 75px;
+  max-width: 1024px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  position: relative;
+}
+.tile-inner {
+  postion: absolute;
+  width: 16.66667%;
+height: 33.33333%;
+}
+.tile-1 {
+  top: 0%;
+  left: 0%;
+}
+.tile-2 {
+  top: 0%;
+  left: 16.66667%;
+}
+.tile-3 {
+  top: 0%;
+  left: 33.33333%;
+}
+.tile-4 {
+  top: 0%;
+  left: 50%;
+}
+.tile-5 {
+  top: 0%;
+  left: 66.66667%;
+}
+.tile-6 {
+  top: 0%;
+  left: 83.33333%;
+}
+.tile-7 {
+  top: 33.33333%;
+  left: 0%;
+}
+.tile-8 {
+  top: 33.33333%;
+  left: 16.66667%;
+}
+.tile-9 {
+  top: 33.33333%;
+  left: 33.33333%;
+}
+.tile-10 {
+  top: 33.33333%;
+  left: 50%;
+}
+.tile-11 {
+  top: 33.33333%;
+  left: 66.66667%;
+}
+.tile-12 {
+  top: 33.33333%;
+  left: 83.33333%;
+}
+.tile-13 {
+  top: 66.66667%;
+  left: 0%;
+}
+.tile-14 {
+  top: 66.66667%;
+  left: 16.66667%;
+}
+.tile-15 {
+  top: 66.66667%;
+  left: 33.33333%;
+}
+.tile-16 {
+  top: 66.66667%;
+  left: 50%;
+}
+.tile-17 {
+  top: 66.66667%;
+  left: 66.66667%;
+}
+.tile-18 {
+  top: 66.66667%;
+  left: 83.33333%;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
