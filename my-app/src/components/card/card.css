@@ -1,19 +1,97 @@
-.contents-game {
-  padding-top: 75px;
-  max-width: 1024px;
-  height: 640px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  perspective: 1000px;
-  position: relative;
+html, body, div, span, h1, h2, , p, a, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
 }
-.tile-inner {
-  postion: absolute;
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  color: #787a80;
+  background-color: #87CEFA;
+  font-family: 'Indie Flower', cursive;
+  font-size: 18px;
+}
+
+
+h2 {
+
+  font-weight: 400;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+s
+.contents-game {
+
+    position: relative;
+    padding-bottom: 50%;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.tile {
+  position: absolute;
+  padding: 5px;
+}
+/* .level-1 .tile  {
+    width: 25%;
+    height: 50%;
+}
+.level-1 .tile-1 {
+  top: 0%;
+  left: 0%;
+}
+.level-1 .tile-2 {
+  top: 0%;
+  left: 25%;
+}
+.level-1 .tile-3 {
+  top: 0%;
+  left: 50%;
+}
+.level-1 .tile-4 {
+  top: 0%;
+  left: 75%;
+}
+.level-1 .tile-5 {
+  top: 50%;
+  left: 0%;
+}
+.level-1 .tile-6 {
+  top: 50%;
+  left: 25%;
+}
+.level-1 .tile-7 {
+  top: 50%;
+  left: 50%;
+}
+.level-1 .tile-8 {
+  top: 50%;
+  left: 75%;
+} */
+.tile {
   width: 16.66667%;
-height: 33.33333%;
+  height: 33.33333%;
 }
 .tile-1 {
   top: 0%;
@@ -27,7 +105,7 @@ height: 33.33333%;
   top: 0%;
   left: 33.33333%;
 }
-.tile-4 {
+ .tile-4 {
   top: 0%;
   left: 50%;
 }
@@ -59,7 +137,7 @@ height: 33.33333%;
   top: 33.33333%;
   left: 66.66667%;
 }
-.tile-12 {
+ .tile-12 {
   top: 33.33333%;
   left: 83.33333%;
 }
@@ -87,8 +165,35 @@ height: 33.33333%;
   top: 66.66667%;
   left: 83.33333%;
 }
-img {
+
+.tile-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+}
+.tile-outside,
+.tile-inside {
   display: block;
-  max-width: 100%;
-  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s, background 0.3s;
+          transition: transform 0.3s, background 0.3s;
+}
+.tile-outside {
+  background: url("./images/backskirt.png") 50% 50% no-repeat;
+  background-color: #dcdee1;
+  box-shadow: 0 0 0 1px #787a80;
+}
+.tile-inside {
+  background-color: #f8fafc;
+  box-shadow: 0 0 0 1px #787a80;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }

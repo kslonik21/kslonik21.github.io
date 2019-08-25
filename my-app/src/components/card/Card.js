@@ -13,13 +13,22 @@ class Card extends React.Component {
     console.log(e.target);
   }
   render() {
-  let doubleCards = [];
-  arr.forEach((item,i) =>
-      doubleCards.push(item,item)
+    let doubleCards = [];
+    arr.forEach((item,i) =>
+        doubleCards.push(item,item)
   );
   return (
     <div className="contents-game">
-        {doubleCards.map((item) => <div onClick={this.cleck} className={`tile-inner tile-${item.id}`}><img src={item.img} /></div>)}
+        {doubleCards.map((item) =>
+          <div
+            onClick={this.cleck}
+            className={`tile tile-${item.id}`}>
+            <div className="tile-inner">
+              <span className="tile-outside"></span>
+              <span className="tile-inside"><img src={item.img}/></span>
+            </div>
+          </div>
+        )}
     </div>
 
 
