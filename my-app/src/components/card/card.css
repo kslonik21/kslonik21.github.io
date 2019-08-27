@@ -71,14 +71,14 @@ body {
     font-size: 0;
     cursor: pointer;
 }
-.tile.flipped .backskirt {
+/* .tile.flipped .backskirt {
   -webkit-transform: rotateY(-180deg);
         transform: rotateY(-180deg);
-}
+} */
 .flipped {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
-          transition: transform 0.3s, background 0.3s;
+          transition: transform 0.5s, background 0.5s;
           backface-visibility: hidden;
 
 }
@@ -90,6 +90,7 @@ img {
   display: block;
   width: 125px;
   height: 125px;
+	transform:
   /* -webkit-transform: rotateY(-180deg);
          transform: rotateY(-180deg); */
 }

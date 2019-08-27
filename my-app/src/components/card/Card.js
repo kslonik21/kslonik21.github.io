@@ -3,33 +3,54 @@ import ReactCardsFlip from "react-card-flip"
 import arr from './cards'
 import image01 from './cards'
 import './card.css'
-let storageCards = {
-  card1: null,
-  card2: null,
-  card2id: null,
-  card1id: null,
-  card1flipped: false,
-  card2flipped: false,
-  flippedTiles: 0,
-  numMoves: 0,
-  reset: function () {
-    this.card1 = null;
-    this.card2 = null;
-    this.card2id = null;
-    this.card1id = null;
-    this.card1flipped = false;
-    this.card2flipped = false;
-    this.flippedTiles = 0;
-    }
-};
+const kek = arr;
+// let storageCards = {
+//   card1: null,
+//   card2: null,
+//   card2id: null,
+//   card1id: null,
+//   card1flipped: false,
+//   card2flipped: false,
+//   flippedTiles: 0,
+//   numMoves: 0,
+//   reset: function () {
+//     this.card1 = null;
+//     this.card2 = null;
+//     this.card2id = null;
+//     this.card1id = null;
+//     this.card1flipped = false;
+//     this.card2flipped = false;
+//     this.flippedTiles = 0;
+//     }
+// };
 
 class Card extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      shuffleArr: this.shuffle(arr),
+      storageCards: {
+        card1: null,
+        card2: null,
+        card2id: null,
+        card1id: null,
+        card1flipped: false,
+        card2flipped: false,
+        flippedTiles: 0,
+        numMoves: 0,
+        reset: function () {
+          this.card1 = null;
+          this.card2 = null;
+          this.card2id = null;
+          this.card1id = null;
+          this.card1flipped = false;
+          this.card2flipped = false;
+          this.flippedTiles = 0;
+          }
+      },
       cards: arr
     }
-    this.gameCardsMissMatch = this.gameCardsMissMatch.bind(this);
+    // this.gameCardsMissMatch = this.gameCardsMissMatch.bind(this);
     this.gameCardsMatch = this.gameCardsMatch.bind(this);
     this.shuffle = this.shuffle.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -40,60 +61,72 @@ class Card extends React.Component {
         return arr;
   }
   gameCardsMatch() {
+    const storage1 = this.state.storageCards;
     setTimeout(function() {
-      storageCards.card1.classList.add('correct');
-      storageCards.card2.classList.add('correct');
-    },300);
-    setTimeout(function() {
-      storageCards.card1.classList.remove('correct');
-      storageCards.card2.classList.remove('correct');
-      storageCards.card1.classList.add('correct');
-      storageCards.card2.classList.add('hide');
-      storageCards.reset();
-    },1500)
-  }
+      storage1.card1 = storage1.card1.classList.add('hide');
+      storage1.card2 = storage1.card2.classList.add('hide');
+      storage1.reset();
+    },1000);
+
+    this.setState({storageCards:storage1});
+}
   gameCardsMissMatch() {
+    const storage = this.state.storageCards
     setTimeout(function() {
-      storageCards.card1.classList.remove('flipped');
-      storageCards.card2.classList.remove('flipped');
-      storageCards.reset();
+      storage.card1 = storage.card1.classList.remove('flipped');
+      storage.card2 = storage.card2.classList.remove('flipped');
+      storage.reset();
     }, 900);
+    this.setState({storageCards:storage})
   }
   handleClick(e) {
     e.preventDefault();
+    const storage = this.state.storageCards;
     const targetTile = e.target.closest('.tile');
     if(!targetTile.classList.contains('flipped')) {
-      if(storageCards.card1flipped===false && storageCards.card2flipped === false) {
+      if(storage.card1flipped===false && storage.card2flipped === false) {
         targetTile.classList.add('flipped');
-        storageCards.card1flipped = true;
-        storageCards.card1 = targetTile;
-        storageCards.card1id = targetTile.id;
-      } else if(storageCards.card1flipped===true && storageCards.card2flipped === false) {
+        storage.card1flipped = true;
+        storage.card1 = targetTile;
+        storage.card1id = targetTile.id;
+        this.setState({
+          storageCards: storage
+        })
+      } else if(storage.card1flipped===true && storage.card2flipped===false) {
         targetTile.classList.add('flipped');
-        storageCards.card2 = targetTile;
-        storageCards.card2id = targetTile.id;
-        storageCards.card2flipped = true;
-        if(storageCards.card1id === storageCards.card2id) {
+        storage.card2flipped = true;
+        storage.card2 = targetTile;
+        storage.card2id = targetTile.id;
+        if(storage.card1id === storage.card2id) {
           this.gameCardsMatch();
         } else {
           this.gameCardsMissMatch();
         }
+        this.setState({
+          storageCards: storage
+        })
+
       }
     }
+  }
+  componentDidMount() {
 
   }
-
+  duplicateCard() {
+    let doubleCards = [];
+    this.state.cards.forEach((item) =>
+      doubleCards.push(item,item))
+  }
   render() {
-
-    let cardsCopy = this.state.cards.slice();
+    console.log(kek);
+    let cardsCopy = this.state.shuffleArr.slice();
     let doubleCards = [];
     let classes = ['backskirt'];
     let flippedClass = ['tile'];
-
-    cardsCopy.forEach((item,i) =>
-        doubleCards.push(item,item)
-    );
-    // let shuffleCards = this.shuffle(doubleCards);
+    cardsCopy.forEach(function(item,i) {
+        doubleCards.push(item,item);
+    });
+    let shufArr = this.shuffle(doubleCards);
     if(this.state.addClass) {
       classes.push("flipped");
     }
