@@ -8,6 +8,6 @@ import image06 from './images/monsters-06.png'
 import image07 from './images/monsters-07.png'
 import image08 from './images/monsters-08.png'
 import image09 from './images/monsters-09.png'
-let arr = [{id:1,img:image01},{id:2,img:image02},{id:3,img:image03},{id:4,img:image04},{id:5,img:image05},{id:6,img:image06},{id:7,img:image07},{id:8,img:image08},{id:8,img:image09}];
+let arr = [{id:1,img:image01},{id:2,img:image02},{id:3,img:image03},{id:4,img:image04},{id:5,img:image05},{id:6,img:image06},{id:7,img:image07},{id:8,img:image08},{id:9,img:image09}];
 
 export default arr
