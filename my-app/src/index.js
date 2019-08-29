@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './components/card/Card';
+import Game from './components/card/Game'
 
-
-ReactDOM.render(<Card />, document.getElementById('root'));
+ReactDOM.render(<Game/>, document.getElementById('root'));

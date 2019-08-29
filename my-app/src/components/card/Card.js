@@ -3,26 +3,6 @@ import ReactCardsFlip from "react-card-flip"
 import arr from './cards'
 import image01 from './cards'
 import './card.css'
-const kek = arr;
-// let storageCards = {
-//   card1: null,
-//   card2: null,
-//   card2id: null,
-//   card1id: null,
-//   card1flipped: false,
-//   card2flipped: false,
-//   flippedTiles: 0,
-//   numMoves: 0,
-//   reset: function () {
-//     this.card1 = null;
-//     this.card2 = null;
-//     this.card2id = null;
-//     this.card1id = null;
-//     this.card1flipped = false;
-//     this.card2flipped = false;
-//     this.flippedTiles = 0;
-//     }
-// };
 
 class Card extends React.Component {
   constructor(props){
@@ -50,11 +30,9 @@ class Card extends React.Component {
       },
       cards: arr
     }
-    // this.gameCardsMissMatch = this.gameCardsMissMatch.bind(this);
     this.gameCardsMatch = this.gameCardsMatch.bind(this);
     this.shuffle = this.shuffle.bind(this);
     this.handleClick = this.handleClick.bind(this);
-
   }
   shuffle(arr) {
     for(let j, temp, i=arr.length; i; j=parseInt(Math.random()*i),temp=arr[--i],arr[i]=arr[j],arr[j]=temp);
@@ -109,32 +87,30 @@ class Card extends React.Component {
       }
     }
   }
-  componentDidMount() {
-
-  }
   duplicateCard() {
     let doubleCards = [];
     this.state.cards.forEach((item) =>
       doubleCards.push(item,item))
   }
   render() {
-    console.log(kek);
-    let cardsCopy = this.state.shuffleArr.slice();
+    let cardsCopy = this.state.cards.slice();
     let doubleCards = [];
     let classes = ['backskirt'];
     let flippedClass = ['tile'];
     cardsCopy.forEach(function(item,i) {
         doubleCards.push(item,item);
     });
-    let shufArr = this.shuffle(doubleCards);
     if(this.state.addClass) {
       classes.push("flipped");
     }
   return (
     <div className='container'>
     <div className="contents-game" >
-        {doubleCards.map((card,index) =>
-          <div key={index} className={flippedClass.join(" ")} id={card.id} onClick={this.handleClick}>
+        {this.props.til.map((card,index) =>
+          <div key={index}
+               className={flippedClass.join(" ")}
+               id={card.id}
+               onClick={this.handleClick}>
             <div className={classes.join(' ')}></div>
             <img src={card.img}/>
           </div>
