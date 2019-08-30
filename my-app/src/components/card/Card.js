@@ -16,8 +16,8 @@ class Card extends React.Component {
         card1id: null,
         card1flipped: false,
         card2flipped: false,
+        numTiles: 0,
         flippedTiles: 0,
-        numMoves: 0,
         reset: function () {
           this.card1 = null;
           this.card2 = null;
@@ -25,11 +25,15 @@ class Card extends React.Component {
           this.card1id = null;
           this.card1flipped = false;
           this.card2flipped = false;
-          this.flippedTiles = 0;
+
           }
       },
-      cards: arr
+      cards: arr,
+      numMoves:0,
+      flippedTiles:0
+
     }
+    this.gameCounter = this.gameCounter.bind(this);
     this.gameCardsMatch = this.gameCardsMatch.bind(this);
     this.shuffle = this.shuffle.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -38,15 +42,30 @@ class Card extends React.Component {
     for(let j, temp, i=arr.length; i; j=parseInt(Math.random()*i),temp=arr[--i],arr[i]=arr[j],arr[j]=temp);
         return arr;
   }
+  gameCounter() {
+    this.setState(function(state) {
+      return {
+        numMoves: state.numMoves+1
+      }
+    })
+  }
   gameCardsMatch() {
     const storage1 = this.state.storageCards;
     setTimeout(function() {
       storage1.card1 = storage1.card1.classList.add('hide');
       storage1.card2 = storage1.card2.classList.add('hide');
+      // storage1.flippedTiles = storage1.flippedTiles + 2;
       storage1.reset();
+
     },1000);
 
-    this.setState({storageCards:storage1});
+    this.setState(function(state){
+      return {
+      storageCards:storage1,
+      flippedTiles: state.flippedTiles+2
+    }
+  })
+    this.gameCounter();
 }
   gameCardsMissMatch() {
     const storage = this.state.storageCards
@@ -54,8 +73,10 @@ class Card extends React.Component {
       storage.card1 = storage.card1.classList.remove('flipped');
       storage.card2 = storage.card2.classList.remove('flipped');
       storage.reset();
+
     }, 900);
     this.setState({storageCards:storage})
+    this.gameCounter();
   }
   handleClick(e) {
     e.preventDefault();
@@ -97,6 +118,11 @@ class Card extends React.Component {
     let doubleCards = [];
     let classes = ['backskirt'];
     let flippedClass = ['tile'];
+    let counter = <div className='counter'>
+                    <span className='moves'>
+                      Moves: {this.state.numMoves}
+                    </span>
+                  </div>
     cardsCopy.forEach(function(item,i) {
         doubleCards.push(item,item);
     });
@@ -105,6 +131,7 @@ class Card extends React.Component {
     }
   return (
     <div className='container'>
+    {counter}
     <div className="contents-game" >
         {this.props.til.map((card,index) =>
           <div key={index}
@@ -120,5 +147,12 @@ class Card extends React.Component {
     </div>
     )
   }
+}
+function Counter() {
+  return (
+    <div className="counter">
+      <span className="moves"></span>
+    </div>
+  )
 }
 export default Card
